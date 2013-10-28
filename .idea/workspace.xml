@@ -9,7 +9,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="65b2aa6e-712c-4b71-9693-a8787ecb7279" time="1382954759935" ignored="false" />
     <file path="/Gemfile" changelist="65b2aa6e-712c-4b71-9693-a8787ecb7279" time="1382953693227" ignored="false" />
-    <file path="/routes.rb" changelist="65b2aa6e-712c-4b71-9693-a8787ecb7279" time="1382954797381" ignored="false" />
+    <file path="/routes.rb" changelist="65b2aa6e-712c-4b71-9693-a8787ecb7279" time="1382955482719" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +55,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="21" selection-start="273" selection-end="273" vertical-scroll-proportion="0.17736487">
+            <state line="7" column="3" selection-start="256" selection-end="256" vertical-scroll-proportion="0.17736487">
               <folding />
             </state>
           </provider>
@@ -488,7 +488,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="21" selection-start="273" selection-end="273" vertical-scroll-proportion="0.17736487">
+        <state line="7" column="3" selection-start="256" selection-end="256" vertical-scroll-proportion="0.17736487">
           <folding />
         </state>
       </provider>
