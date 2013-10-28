@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="65b2aa6e-712c-4b71-9693-a8787ecb7279" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,7 +54,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="3" selection-start="256" selection-end="256" vertical-scroll-proportion="0.17736487">
+            <state line="7" column="2" selection-start="255" selection-end="255" vertical-scroll-proportion="0.17736487">
               <folding />
             </state>
           </provider>
@@ -488,7 +487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="3" selection-start="256" selection-end="256" vertical-scroll-proportion="0.17736487">
+        <state line="7" column="2" selection-start="255" selection-end="255" vertical-scroll-proportion="0.17736487">
           <folding />
         </state>
       </provider>
