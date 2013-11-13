@@ -1,0 +1,17 @@
+
+<div class="login-body">
+    <div class="login">
+        <h1>Login to Web App</h1>
+        <%= form_for(:session, url: sessions_path) do |f| %>
+                <p>
+                    <%= f.email_field :email, :placeholder => 'E-Mail', :required => '' %>
+                </p>
+                <p>
+                    <%= f.password_field :password, :placeholder => 'Password', :required => ''%>
+                </p>
+                <p class="submit">
+                    <%= f.submit "Login", :id => 'submit' %>
+                </p>
+        <% end %>
+    </div>
+</div>

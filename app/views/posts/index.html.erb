@@ -1,29 +1,18 @@
-<h1>Listing posts</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.body %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<h3 class="align-c">
+    Listing posts
+    <% if current_user %>
+        <%= link_to 'New Post', new_post_path, :class => 'link' %>
     <% end %>
-  </tbody>
-</table>
+</h3>
 
-<br>
+    <% @posts.each do |post| %>
+        <section class="group">
+          <h3><%= post.title %></h3>
+          <p><%= post.body %></p>
+          <%= link_to post do %>
+            <span class="read_more">Read more...</span>
+          <% end %>
 
-<%= link_to 'New Post', new_post_path %>
+        </section>
+    <% end %>
+

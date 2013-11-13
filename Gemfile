@@ -8,6 +8,8 @@ group :development do
   gem 'sqlite3'
 end
 
+#Admin panel
+gem 'activeadmin', github: 'gregbell/active_admin'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -39,10 +41,13 @@ group :production do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
+
+gem 'thin'
+gem 'quiet_assets', :group => 'development'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
