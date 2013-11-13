@@ -10,20 +10,29 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @username = User.find(@post.user_id).name if @post.user_id
   end
 
   # GET /posts/new
   def new
+    unless current_user
+      redirect_to root_path, :notice => 'Not authorize!!!'
+    end
     @post = Post.new
   end
 
   # GET /posts/1/edit
   def edit
+    unless current_user
+      redirect_to root_path, notice: 'Not authorized!!!'
+    end
   end
 
   # POST /posts
   # POST /posts.json
   def create
+
+
     @post = Post.new(post_params)
 
     respond_to do |format|
@@ -40,6 +49,7 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -69,6 +79,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :body)
+      params.require(:post).permit(:title, :body, :user_id)
     end
 end

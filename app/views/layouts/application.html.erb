@@ -2,18 +2,109 @@
 <html>
 <head>
   <title>Blog</title>
+  <link rel="icon" href="images/favicon.gif" type="image/x-icon"/>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= notice %>
-<br/>
-  <a href="/">Main page</a>
-<%= link_to "Register", new_user_path %>
-<%= link_to "Sign in", new_session_path %>
 
-<%= yield %>
+
+
+
+<% if notice %>
+    <div class="notice">
+      <%= notice %>
+    </div>
+<% end %>
+
+<!--start container-->
+<div id="container">
+
+  <!--start header-->
+
+  <header>
+
+    <!--start logo-->
+   <%= link_to root_path do %>
+      <%= image_tag 'logo.png', :width => '221', :height => '100', :alt => 'logo' %>
+    <% end %>
+
+    <!--end logo-->
+
+    <!--start menu-->
+
+    <nav>
+      <ul>
+        <li>
+            <%= link_to 'Home', root_path, :class => 'current' %>
+        </li>
+          <% unless current_user %>
+            <li><%= link_to "Register", new_user_path %></li>
+            <li><%= link_to "Log in", new_session_path %></li>
+          <% else %>
+            <li><%= link_to "Log out", log_out_path%></li>
+            <li class="welcome">Welcome, <span><%= print_username %></span>!</li>
+          <% end %>
+
+      </ul>
+    </nav>
+    <!--end menu-->
+
+
+    <!--end header-->
+  </header>
+
+
+  <!--start intro-->
+
+  <div id="intro">
+
+    <div class="group_bannner_right">
+      <%= image_tag 'picture.png', :width => '550', :height => '316', :alt => 'banner' %>
+    </div>
+
+    <header class="group_bannner_left">
+      <hgroup>
+        <h1>Simple.Think. </h1>
+        <h2>“The little things are infinitely the most important.“ </h2>
+      </hgroup>
+    </header>
+  </div>
+  <!--end intro-->
+
+
+
+  <!--start holder-->
+
+  <div class="holder_content">
+    <%= yield %>
+  </div>
+  <!--end holder-->
+
+
+
+
+
+</div>
+<!--end container-->
+
+<!--start footer-->
+<footer>
+  <div class="container">
+    <div id="FooterTwo"> © 2011 Think simple </div>
+    <div id="FooterTree"> Valid html5, design and code by <a href="http://www.marijazaric.com">marija zaric - creative simplicity</a>   </div>
+  </div>
+</footer>
+<!--end footer-->
+<!-- Free template distributed by http://freehtml5templates.com -->
+
+
+
 
 </body>
 </html>

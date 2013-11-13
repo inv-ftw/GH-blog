@@ -3,9 +3,15 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      redirect_to root_url, notice: "Hello!"
+      session[:name] = user.name.capitalize
+      redirect_to root_url, notice: "Logged in!"
     else
-      redirect_to new_session_path, notice: "Login or password incorrect!"
+      redirect_to new_session_path, notice: 'Login or password incorrect!'
     end
+  end
+
+  def destroy
+    session[:user_id] = nil
+    redirect_to root_url, notice: 'Logged out!'
   end
 end

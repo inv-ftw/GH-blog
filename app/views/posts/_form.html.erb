@@ -1,4 +1,4 @@
-<%= form_for(@post) do |f| %>
+<%= form_for @post, :html => {:class => 'align-c'} do |f|  %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -12,12 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, :placeholder => 'Title', :class => 'title' %>
   </div>
   <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, :placeholder => 'Body' %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :user_id, :value => current_user.id %>
   </div>
   <div class="actions">
     <%= f.submit %>
