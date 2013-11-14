@@ -10,7 +10,7 @@ group :development do
 end
 
 #Admin panel
-gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'activeadmin', :git => "git://github.com/gregbell/active_admin.git"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
