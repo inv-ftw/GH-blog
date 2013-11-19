@@ -11,9 +11,7 @@
  * Original PSD by Orman Clark: http://goo.gl/D8zmk
  */
 
-
-
-.login {
+.login, .registration {
   position: relative;
   margin: 50px auto;
   padding: 20px 20px 20px;
@@ -25,8 +23,7 @@
 
 }
 
-
-.login h1 {
+.login h1, .registration h1 {
   margin: -20px -20px 21px;
   line-height: 40px;
   font-size: 15px;
@@ -45,19 +42,19 @@
   box-shadow: 0 1px whitesmoke;
 }
 
-.login p {
+.login p, .registration p {
   margin: 20px 0 0;
 }
 
-.login p:first-child {
+.login p:first-child, .registration p:first-child {
   margin-top: 0;
 }
 
-.login input[type=email], .login input[type=password] {
+.login input[type=email], .login input[type=password], .registration input[type=email], .registration input[type=password], .registration input[type=text] {
   width: 278px;
 }
 
-.login p.remember_me {
+.login p.remember_me, .registration p.remember_me {
   float: left;
   line-height: 31px;
 }
@@ -75,7 +72,7 @@
   vertical-align: middle;
 }
 
-.login p.submit {
+.login p.submit, .registration p.submit {
   text-align: right;
 }
 
@@ -112,15 +109,15 @@ input {
 }
 
 input[type=email], input[type=password], input[type=text] {
-  margin: 5px ;
+  margin: 5px;
   padding: 0 10px;
-  width: 200px ;
-  height: 34px ;
+  width: 200px;
+  height: 34px;
   color: #404040;
   background: white;
-  border: 1px solid ;
+  border: 1px solid;
   border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-  border-radius: 2px ;
+  border-radius: 2px;
   outline: 5px solid #eff4f7;
   -moz-outline-radius: 3px;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
@@ -128,15 +125,15 @@ input[type=email], input[type=password], input[type=text] {
 }
 
 textarea {
-  margin: 5px ;
+  margin: 5px;
   padding: 0 10px;
-  width: 400px ;
-  height: 250px ;
+  width: 400px;
+  height: 250px;
   color: #404040;
   background: white;
-  border: 1px solid ;
+  border: 1px solid;
   border-color: #c4c4c4 #d1d1d1 #d4d4d4;
-  border-radius: 2px ;
+  border-radius: 2px;
   outline: 5px solid #eff4f7;
   -moz-outline-radius: 3px;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
