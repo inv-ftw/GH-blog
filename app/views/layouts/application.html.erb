@@ -48,7 +48,7 @@
             <li><%= link_to "Log in", new_session_path %></li>
           <% else %>
             <li><%= link_to "Log out", log_out_path%></li>
-            <li class="welcome">Welcome, <span><%= print_username %></span>!</li>
+            <li class="welcome">Welcome, <span><%= current_user.name %></span>!</li>
           <% end %>
 
       </ul>

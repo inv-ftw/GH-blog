@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :is_authenticated?, only: [:new, :create, :edit, :update, :destroy]
+  before_action :has_rights?, only: [:edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
@@ -10,31 +12,23 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @username = User.find(@post.user_id).name if @post.user_id
   end
 
   # GET /posts/new
   def new
-    unless current_user
-      redirect_to root_path, :notice => 'Not authorize!!!'
-    end
     @post = Post.new
   end
 
   # GET /posts/1/edit
   def edit
-    unless current_user
-      redirect_to root_path, notice: 'Not authorized!!!'
-    end
+
   end
 
   # POST /posts
   # POST /posts.json
   def create
-
-
     @post = Post.new(post_params)
-    @post.user = User.find(session[:user_id])
+    @post.user = current_user
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
@@ -77,6 +71,15 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+  def is_authenticated?
+    redirect_to root_path, :notice => 'Not authorize!' unless current_user
+  end
+
+  def has_rights?
+    redirect_to root_path, :notice => 'You can\'t do this!' unless @post.user == current_user else true
+  end
+
+  helper_method :has_rights?
   # Never trust parameters from the scary internet, only allow the white list through.
   def post_params
     params.require(:post).permit(:title, :body)

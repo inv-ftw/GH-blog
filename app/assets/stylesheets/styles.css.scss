@@ -1,5 +1,5 @@
 /***************************************************
-	      think simple by marija zaric and distributed by http://freehtml5templates.com
+      think simple by marija zaric and distributed by http://freehtml5templates.com
 ***************************************************
 
 
@@ -526,4 +526,25 @@ nav ul li a.current{
 
 .align-c {
   text-align: center !important;
+}
+
+p.author-index {
+  font-size: 9px;
+  font-style: italic;
+  font-weight: bold;
+  color: #8a949e;
+}
+
+section.show-post p.links {
+  text-align: right;
+}
+
+section.show-post p a:hover {
+  color: #990000;
+}
+
+section.show-post p a {
+  color: #8a949e;
+  font-size: 11px;
+  text-decoration: none;
 }

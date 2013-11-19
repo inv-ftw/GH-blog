@@ -1,6 +1,12 @@
 <section class="show-post">
+  <p class="links">
+    <%= link_to 'Edit', edit_post_path(@post) %>
+    <%= link_to 'Delete', @post, method: :delete %>
+  </p>
   <h3><%= @post.title %></h3>
   <p><%= @post.body %></p>
-  <p class="author">Posted by: <%= @username ? @username : 'Somebody' %>.</p>
+  <% if has_rights? %>
+  <% end %>
+  <p class="author"><%= author_helper @post %>.</p>
 </section>
 

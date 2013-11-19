@@ -1,7 +1,7 @@
 <h3 class="align-c">
     Listing posts
     <% if current_user %>
-        <%= link_to 'New Post', new_post_path, :class => 'link' %>
+        <%= link_to 'New Post', new_post_path, class: 'link' %>
     <% end %>
 </h3>
 
@@ -9,6 +9,7 @@
         <section class="group">
           <h3><%= post.title %></h3>
           <p><%= post.body %></p>
+          <p class="author-index"><%= author_helper post %></p>
           <%= link_to post do %>
             <span class="read_more">Read more...</span>
           <% end %>

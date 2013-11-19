@@ -9,6 +9,9 @@ group :development do
   gem 'sqlite3'
 end
 
+#localization
+gem 'russian', '~> 0.6.0'
+
 #Admin panel
 gem 'activeadmin', :git => "git://github.com/gregbell/active_admin.git"
 # Use SCSS for stylesheets
